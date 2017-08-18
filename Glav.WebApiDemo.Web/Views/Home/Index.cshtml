@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Glav.WebApiDemo.Web.Models.Slide>
+@section scripts {
+	<script src="~/Scripts/Custom/uiBinder.js" type="text/javascript"></script>
+	<script src="~/Scripts/Custom/slideDeckManager.js" type="text/javascript"></script>
+	<script src="~/Scripts/Custom/Home.js" type="text/javascript"></script>
+}
+
+<header>
+    <div class="content-wrapper">
+        <div class="float-left">
+            <p class="site-title">
+                <a href="~/">From Start to Rest in 60 Minutes (DEV323)</a></p>
+        </div>
+			<span id="slide-list-action">Slide List</span>
+			<div id="slide-list"class="hidden">
+				<ul>
+					@foreach (var slide in Model)
+					{
+						<li><a href="/#@slide.SequenceNumber">&nbsp;&nbsp;#@slide.SequenceNumber </a></li>
+					}
+
+				</ul>
+			</div>
+    </div>
+</header>
+<div id="body">
+	<input type="hidden" id="current-slide-number" value="0" />
+    <section class="featured heading">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1></h1>
+                <h2></h2>
+            </hgroup>
+            <p></p>
+        </div>
+		<div class="access-area">
+			<input type="text" id="slide-feedback" />
+			<button id="submit-slide-feedback">Submit Feedback</button>
+			<span id="feedback-posted-message"></span>
+		</div>
+    </section>
+	
+    <div id="slide-detail-content">
+		<section class="content-wrapper main-content clear-fix">
+		<div id="image-container">
+		</div>
+
+			<h3></h3>
+			<ol class="round">
+				<li class="one hidden">
+					<h5>
+						{Point One Header}
+					</h5>
+					{Point One text}
+					</li>
+				<li class="two hidden">
+					<h5>
+						{Point Two Header}
+					</h5>
+						{Point Two text}
+					</li>
+				<li class="three hidden">
+					<h5>
+						{Point Three Header}
+					</h5>
+						{Point Three text}
+					</li>
+			</ol>
+
+		</section>
+
+
+		<div id="slide-navigation">
+			<a id="prev-slide" href="#">Prev</a>
+			<a id="next-slide" href="#">Next</a>
+			<a id="demo-link" class="demo-link" href="#">Demo Page</a>
+		</div>
+	</div>
+</div>

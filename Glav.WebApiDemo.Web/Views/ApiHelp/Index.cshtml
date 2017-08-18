@@ -1,0 +1,22 @@
+﻿@model dynamic 
+@*System.Web.Http.Description.IApiExplorer*@
+
+@using System.Net;
+@using System.Net.Http;
+@using System.Web.Http;
+@using System.Web.Http.Description;
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Api Help</h2>
+
+<ul>
+@foreach (var desc in Model.ApiDescriptions)
+{ 
+	<li><h5>@desc.HttpMethod @desc.RelativePath</h5>
+	<p>@desc.Documentation</p>
+	</li>
+}
+</ul>

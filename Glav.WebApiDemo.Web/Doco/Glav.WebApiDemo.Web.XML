@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Glav.WebApiDemo.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Glav.WebApiDemo.Web.App_Start.NinjectWebCommon.Start">
+            <summary>
+            Starts the application
+            </summary>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.App_Start.NinjectWebCommon.Stop">
+            <summary>
+            Stops the application.
+            </summary>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.App_Start.NinjectWebCommon.CreateKernel">
+            <summary>
+            Creates the kernel that will manage your application.
+            </summary>
+            <returns>The created kernel.</returns>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.App_Start.NinjectWebCommon.RegisterServices(Ninject.IKernel)">
+            <summary>
+            Load your modules or register your services here!
+            </summary>
+            <param name="kernel">The kernel.</param>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.Controllers.CustomBindingController.Post(Glav.WebApiDemo.Web.Framework.DodgyModel)">
+            <summary>
+            Dodgy Demo of binding some dodgy data toa dodgy model
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.Controllers.CustomBindingController.GetStatistics">
+            <summary>
+            Get the site stats.
+            </summary>
+            <returns>Numbers of awesomeness</returns>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.Controllers.SimpleController.Get">
+            <summary>
+            The default GET implementation
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.Controllers.SimpleController.Get(System.Int32)">
+            <summary>
+            Standard GET but expecting an integer parameter
+            </summary>
+            <param name="id">Some identifier</param>
+            <returns></returns>
+        </member>
+        <member name="M:Glav.WebApiDemo.Web.Controllers.SimpleController.GetMeSomeBeer(System.String)">
+            <summary>
+            Demand a serving of your favourite amber beverage
+            </summary>
+            <param name="kindOfBeer">The type of beeryou want</param>
+            <returns>A string showing complete compliance with your request</returns>
+        </member>
+        <member name="M:Glav._WebApiDemo.Web.Controllers.SlideController.Get">
+            <summary>
+            Gets the startiung slide in the Deck
+            </summary>
+            <returns>Presentation slide information</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Glav._WebApiDemo.Web.Controllers.SlideController.GetSlide(System.Nullable{System.Int32})" -->
+        <member name="T:System.Web.Http.XmlCommentDocumentationProvider">
+            <summary>
+            This code courtesy of Yao's blog
+            http://blogs.msdn.com/b/yaohuang1/archive/2012/05/21/asp-net-web-api-generating-a-web-api-help-page-using-apiexplorer.aspx
+            </summary>
+        </member>
+    </members>
+</doc>
